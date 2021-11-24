@@ -71,8 +71,10 @@ check::check(const char*  myfile , int options){
         
         closedir (dir); // close the directory
         
-        if (options==1) // Analyze option
+        switch (options)
         {
+          case 1: // Analyze option
+          
             for (auto file : files)  // read all files in the vector files one by one
             {   
                 bool flag = false;                 // to ensure that we just want to analyze not create any folder
@@ -98,10 +100,10 @@ check::check(const char*  myfile , int options){
             showInfo(OBJECT_count,"cyn","OBJECT");
             showInfo(LIBARARY_count,"green","LIBRARY");
             showInfo(EXECUTABLE_count,"mag","EXECUTABLE");
-        }
-
-        if (options==2) // Organize option
-        {
+            
+            break;
+        
+            case 2:  // Organize option
             for (auto file : files)
             {   
                 bool flag = true; // to ensure that new folders will be created to move each detected file to it crosspound folder
@@ -116,9 +118,13 @@ check::check(const char*  myfile , int options){
                 FileExtn(LIBRARY, file,flag);
                 FileExtn(EXECUTABLE, file,flag);
             }
-        }
+        
+            break;
        
-        if(options !=1 && options !=2) {std::cout<<"please set an option!";}
+            default:
+            std::cout<<BOLD(FRED("Invalid option!!\n"));
+    }
+    
     }
 
 void check::FileExtn(std::vector<std::string> File, std::string  Myfile, bool flag)
