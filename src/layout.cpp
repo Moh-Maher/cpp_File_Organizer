@@ -119,3 +119,11 @@ std::cout<<BOLD(FGRN("                MOHAMMED MAHER ABDELRAHIM MOHAMMED 2021   
 std::cout<<BOLD(FGRN("                        maherali8932@gmail.c                        "))<<std::endl;
 std::cout<<BOLD(FGRN("===================================================================="))<<std::endl;
 } 
+
+void menu(){
+
+   std::cout<<"-------------[-main menu-]--------------"<<std::endl;
+   std::cout<<"set and options\n";
+   std::cout<<"[1] Analyze\n";
+   std::cout<<"[2] Organize\n";
+}

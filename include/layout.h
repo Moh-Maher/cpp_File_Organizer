@@ -33,6 +33,6 @@ by:  Mohammed Maher Abdelrahim Mohammed
 void timestamp ( void );
 void Info(void);
 void name(void);
- 
+void menu(void); 
 
 #endif

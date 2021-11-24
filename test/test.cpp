@@ -15,14 +15,12 @@ int main(int argc, const char* argv[]) {
     }
 
    int opt;
-   cout<<"-------------[-main manu-]--------------"<<endl;
-   cout<<"set and options\n";
-   cout<<"[1] Analyze\n";
-   cout<<"[2] Organize\n";
+   name();
+   menu();
    cin>>opt;
     //std::filesystem::path filePath = argv[1];
-   cout<<"==============[-info box-]=============="<<endl;
+    cout<<"==============[-info box-]=============="<<endl;
     check folder(argv[1],opt);
     cout<<"Done!"<<endl;
-   cout<<"========================================"<<endl;
+    cout<<"========================================"<<endl;
 }
