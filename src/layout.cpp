@@ -11,6 +11,7 @@
 #include <ctime>
 #include<stdio.h> 
 #include"layout.h"
+#include"organize.h"
 #include<unistd.h>
 //****************************************************************************80
 void timestamp ( void )
@@ -120,10 +121,78 @@ std::cout<<BOLD(FGRN("                        maherali8932@gmail.c              
 std::cout<<BOLD(FGRN("===================================================================="))<<std::endl;
 } 
 
-void menu(){
+/*void menu(){
 
    std::cout<<"-------------[-main menu-]--------------"<<std::endl;
    std::cout<<"set and options\n";
    std::cout<<"[1] Analyze\n";
    std::cout<<"[2] Organize\n";
+}*/
+
+void Main_Menu(const char*  myfolder){
+   int choice;
+   
+ lable1:  while(choice != 4)
+   {
+	name();
+	int back;
+	printf("-=[ MoDe file organizer Menu ]=-\n");
+      	printf("1 - Analyze this folder \n");
+      	printf("2 - Organize the files\n");
+      	printf("3 - Clear the screen\n");
+      	printf("4 - Quit\n");
+      	scanf("%d", &choice);
+
+      	if((choice < 1) || (choice > 4))
+         	printf("\n[!!] The number %d is an invalid selection.\n\n", choice);
+      
+      	else if (choice < 4)
+      	{  
+      	  if(choice == 1)   
+          {        
+          	    std::cout<<BOLD(FGRN("--------------------------[ Output ]---------------------------"))<<std::endl;
+                   check folder(myfolder,1);
+                   std::cout<<BOLD(FGRN("----------------------------------------------------------------"))<<std::endl;
+                   std::cout<<BOLD(FGRN("press [1] to back to the Main Menu"))<<std::endl;
+                   std::cout<<BOLD(FGRN("press [2] to Exit"))<<std::endl;
+                   scanf("%d", &back);
+                   switch(back){
+                   case 1:
+                        goto lable1;
+                        break;
+                   
+                   case 2:
+                   	return;
+                   	
+                   default:
+                   	std::cout<<BOLD(FRED("Invalid option!!\n"));
+                   }
+          }     
+               
+          else if(choice == 2) 
+          {                    
+               check folder(myfolder,2);
+               std::cout<<BOLD(FGRN("press [1] to back to the Main Menu"))<<std::endl;
+               std::cout<<BOLD(FGRN("press [2] to Exit"))<<std::endl;
+               scanf("%d", &back);
+               
+               switch(back){
+               case 1:
+               	goto lable1;
+                       break;
+                
+              case 2:
+                   	return;
+                   	
+              default:
+                   	std::cout<<BOLD(FRED("Invalid option!!\n"));
+                   }
+     	  }
+     	  
+     	  else if (choice == 3)
+     	 {
+         	system("clear"); 
+         }       
+	}	
+    }
 }
