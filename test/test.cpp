@@ -1,5 +1,4 @@
 #include<iostream>
-//#include"organize.h"
 #include"layout.h"
 
 using namespace std;
@@ -14,8 +13,6 @@ int main(int argc, const char* argv[]) {
         return 1;
     }
      
-   // name();
     Main_Menu(argv[1]);
     
-     
 }
