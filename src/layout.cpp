@@ -121,13 +121,6 @@ std::cout<<BOLD(FGRN("                        maherali8932@gmail.c              
 std::cout<<BOLD(FGRN("===================================================================="))<<std::endl;
 } 
 
-/*void menu(){
-
-   std::cout<<"-------------[-main menu-]--------------"<<std::endl;
-   std::cout<<"set and options\n";
-   std::cout<<"[1] Analyze\n";
-   std::cout<<"[2] Organize\n";
-}*/
 
 void Main_Menu(const char*  myfolder){
    int choice;
@@ -135,6 +128,7 @@ void Main_Menu(const char*  myfolder){
  lable1:  while(choice != 4)
    {
 	name();
+	timestamp();
 	int back;
 	printf("-=[ MoDe file organizer Menu ]=-\n");
       	printf("1 - Analyze this folder \n");
@@ -150,43 +144,53 @@ void Main_Menu(const char*  myfolder){
       	{  
       	  if(choice == 1)   
           {        
-          	    std::cout<<BOLD(FGRN("--------------------------[ Output ]---------------------------"))<<std::endl;
-                   check folder(myfolder,1);
-                   std::cout<<BOLD(FGRN("----------------------------------------------------------------"))<<std::endl;
-                   std::cout<<BOLD(FGRN("press [1] to back to the Main Menu"))<<std::endl;
-                   std::cout<<BOLD(FGRN("press [2] to Exit"))<<std::endl;
-                   scanf("%d", &back);
-                   switch(back){
+          	std::cout<<BOLD(FGRN("--------------------------[ Output ]---------------------------"))<<std::endl;
+          	check folder(myfolder,1);
+          	std::cout<<BOLD(FGRN("----------------------------------------------------------------"))<<std::endl;
+           	std::cout<<BOLD(FGRN("press [1] to back to the Main Menu"))<<std::endl;
+      	   	std::cout<<BOLD(FGRN("press [2] to Exit"))<<std::endl;
+           	lable2: scanf("%d", &back);
+                   
+            	switch(back){
+                   
                    case 1:
                         goto lable1;
                         break;
                    
                    case 2:
-                   	return;
+                   	 std::cout<<"Bye bye!"<<std::endl;
+                   	 return;
                    	
                    default:
-                   	std::cout<<BOLD(FRED("Invalid option!!\n"));
+                   	 std::cout<<BOLD(FRED("Invalid option!!\n"));
+                   	 goto lable2;
                    }
           }     
                
           else if(choice == 2) 
-          {                    
-               check folder(myfolder,2);
+          {
+               std::cout<<BOLD(FGRN("--------------------------[ Output ]---------------------------"))<<std::endl;               
+          	check folder(myfolder,2);
+          	std::cout<<"Done!"<<std::endl;
+          	std::cout<<BOLD(FGRN("----------------------------------------------------------------"))<<std::endl;
                std::cout<<BOLD(FGRN("press [1] to back to the Main Menu"))<<std::endl;
                std::cout<<BOLD(FGRN("press [2] to Exit"))<<std::endl;
-               scanf("%d", &back);
+              lable3: scanf("%d", &back);
                
                switch(back){
-               case 1:
+               
+                  case 1:
                	goto lable1;
                        break;
                 
-              case 2:
+              	  case 2:
+              	  	std::cout<<"Bye bye!"<<std::endl;
                    	return;
                    	
-              default:
-                   	std::cout<<BOLD(FRED("Invalid option!!\n"));
-                   }
+                 default:
+                      std::cout<<BOLD(FRED("Invalid option!!\n"));
+                      goto lable3;
+                 }
      	  }
      	  
      	  else if (choice == 3)
@@ -195,4 +199,5 @@ void Main_Menu(const char*  myfolder){
          }       
 	}	
     }
+    std::cout<<"Bye bye!"<<std::endl;
 }

@@ -16,6 +16,6 @@ int main(int argc, const char* argv[]) {
      
    // name();
     Main_Menu(argv[1]);
-    cout<<"Bye bye!"<<endl;
+    
      
 }
