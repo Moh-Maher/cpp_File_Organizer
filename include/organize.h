@@ -1,4 +1,3 @@
-
 #ifndef _ORGANIZE_
 #define _ORGANIZE_
 
@@ -20,7 +19,7 @@ public:
 private:
 	
 	std::vector<std::string> IMAGES = {"jpeg", "jpg", "tiff", "gif", "bmp", "png", "bpg", "svg", "heif", "psd","ebs"};
-	std::vector<std::string> VIDEOS = {"avi", "flv", "wmv", "mov", "mp4", "webm", "vob", "mng", "qt", "mpg", "mpeg", "3gp"}; 
+	std::vector<std::string> VIDEOS = {"avi", "flv", "wmv", "mov", "mp4", "webm", "vob", "mng", "qt", "mpg", "mpeg", "3gp", "asf", "divx"}; 
 	std::vector<std::string> DOCUMENTS  = {"oxps", "epub", "pages", "docx", "doc", "fdf", "ods", "odt", "pwi", "xsn", "xps",
 	"dotx", "docm", "dox", "rvg", "rtf", "rtfd", "wpd", "xls", "xlsx", "ppt", "ps","epub","js","pdf","pptx"}; 
 	std::vector<std::string> ARCHIVES = {"a", "ar", "cpio", "iso", "tar", "gz", "rz", "7z", "dmg", "rar", "xar", "zip","xz"}; 
