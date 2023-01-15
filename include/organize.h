@@ -22,10 +22,10 @@ private:
 	std::vector<std::string> VIDEOS = {"avi", "flv", "wmv", "mov", "mp4", "webm", "vob", "mng", "qt", "mpg", "mpeg", "3gp", "asf", "divx"}; 
 	std::vector<std::string> DOCUMENTS  = {"oxps", "epub", "pages", "docx", "doc", "fdf", "ods", "odt", "pwi", "xsn", "xps",
 	"dotx", "docm", "dox", "rvg", "rtf", "rtfd", "wpd", "xls", "xlsx", "ppt", "ps","epub","js","pdf","pptx"}; 
-	std::vector<std::string> ARCHIVES = {"a", "ar", "cpio", "iso", "tar", "gz", "rz", "7z", "dmg", "rar", "xar", "zip","xz"}; 
+	std::vector<std::string> ARCHIVES = {"a", "ar", "cpio", "iso", "tar", "gz", "rz", "7z", "dmg", "rar", "xar", "zip","xz","tgz", "pkg"}; 
 	std::vector<std::string> AUDIO = {"aac", "aa", "aac", "dvf", "m4a", "m4b", "m4p", "mp3", "rm","msv", "ogg", "oga", "raw", "vox", "wav", "wma"};
 	std::vector<std::string> PLAINTEXT = {"txt", "in","dat"};
-	std::vector<std::string> SOURCE_CODE = {"f","f90","css","c","h","cc","py","cpp","sh","html5", "html", "htm", "xhtml"};
+	std::vector<std::string> SOURCE_CODE = {"f","f90","css","c","h","cc","py","cpp","sh","html5", "html", "htm", "xhtml", "nb", "cdf"};
 	std::vector<std::string> OBJECT = {"obj","o"};
 	std::vector<std::string> LIBRARY = {"a","so"};
 	std::vector<std::string> EXECUTABLE = {"exe","deb","run","out"};
